@@ -1,0 +1,6 @@
+framework module Pods_MyWorkBook {
+  umbrella header "Pods-MyWorkBook-umbrella.h"
+
+  export *
+  module * { export * }
+}
