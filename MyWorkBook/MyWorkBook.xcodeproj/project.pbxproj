@@ -10,6 +10,8 @@
 		02DE45D229BB1D1C007109E5 /* DXBufferStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D129BB1D1C007109E5 /* DXBufferStorage.m */; };
 		02DE45D529BB1DE1007109E5 /* DXBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D429BB1DE1007109E5 /* DXBuffer.m */; };
 		02DE45D829BB2645007109E5 /* RotateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D729BB2645007109E5 /* RotateAnimation.swift */; };
+		02DE45DA29BB29E4007109E5 /* BasePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D929BB29E4007109E5 /* BasePopupView.swift */; };
+		02DE45DC29BB2AF0007109E5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45DB29BB2AF0007109E5 /* UIViewExtension.swift */; };
 		091EC3E5D0E0D429DDD6B371 /* Pods_MyWorkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F881A5BF06E31F84B7EB765 /* Pods_MyWorkBook.framework */; };
 		84B6135B2779C284005CFB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6135A2779C284005CFB4C /* AppDelegate.swift */; };
 		84B6135F2779C284005CFB4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6135E2779C284005CFB4C /* ViewController.swift */; };
@@ -17,9 +19,9 @@
 		84B613642779C285005CFB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B613632779C285005CFB4C /* Assets.xcassets */; };
 		84B613672779C285005CFB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B613652779C285005CFB4C /* LaunchScreen.storyboard */; };
 		84B613722779C57A005CFB4C /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B613712779C57A005CFB4C /* CustomSlider.swift */; };
-		84B613752779C63F005CFB4C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B613742779C63F005CFB4C /* UIImage+Extension.swift */; };
+		84B613752779C63F005CFB4C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B613742779C63F005CFB4C /* UIImageExtension.swift */; };
 		84B613772779C6E3005CFB4C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B613762779C6E3005CFB4C /* Constant.swift */; };
-		84B613792779C91F005CFB4C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B613782779C91F005CFB4C /* UIColor+Extension.swift */; };
+		84B613792779C91F005CFB4C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B613782779C91F005CFB4C /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		02DE45D329BB1DE1007109E5 /* DXBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXBuffer.h; sourceTree = "<group>"; };
 		02DE45D429BB1DE1007109E5 /* DXBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXBuffer.m; sourceTree = "<group>"; };
 		02DE45D729BB2645007109E5 /* RotateAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateAnimation.swift; sourceTree = "<group>"; };
+		02DE45D929BB29E4007109E5 /* BasePopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupView.swift; sourceTree = "<group>"; };
+		02DE45DB29BB2AF0007109E5 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0F881A5BF06E31F84B7EB765 /* Pods_MyWorkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWorkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA873F226A4807FECD7D588 /* Pods-MyWorkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkBook.debug.xcconfig"; path = "Target Support Files/Pods-MyWorkBook/Pods-MyWorkBook.debug.xcconfig"; sourceTree = "<group>"; };
 		84B613572779C284005CFB4C /* MyWorkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,9 +44,9 @@
 		84B613662779C285005CFB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B613682779C285005CFB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B613712779C57A005CFB4C /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
-		84B613742779C63F005CFB4C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		84B613742779C63F005CFB4C /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		84B613762779C6E3005CFB4C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		84B613782779C91F005CFB4C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		84B613782779C91F005CFB4C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C8B2450F434766F8CC85126E /* Pods-MyWorkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkBook.release.xcconfig"; path = "Target Support Files/Pods-MyWorkBook/Pods-MyWorkBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				02DE45D729BB2645007109E5 /* RotateAnimation.swift */,
+				02DE45D929BB29E4007109E5 /* BasePopupView.swift */,
 			);
 			path = UniversalModules;
 			sourceTree = "<group>";
@@ -151,8 +156,9 @@
 		84B613732779C5EB005CFB4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				84B613742779C63F005CFB4C /* UIImage+Extension.swift */,
-				84B613782779C91F005CFB4C /* UIColor+Extension.swift */,
+				84B613742779C63F005CFB4C /* UIImageExtension.swift */,
+				84B613782779C91F005CFB4C /* UIColorExtension.swift */,
+				02DE45DB29BB2AF0007109E5 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,13 +281,15 @@
 			files = (
 				84B6135F2779C284005CFB4C /* ViewController.swift in Sources */,
 				84B613722779C57A005CFB4C /* CustomSlider.swift in Sources */,
+				02DE45DC29BB2AF0007109E5 /* UIViewExtension.swift in Sources */,
+				02DE45DA29BB29E4007109E5 /* BasePopupView.swift in Sources */,
 				84B613772779C6E3005CFB4C /* Constant.swift in Sources */,
 				02DE45D529BB1DE1007109E5 /* DXBuffer.m in Sources */,
-				84B613792779C91F005CFB4C /* UIColor+Extension.swift in Sources */,
+				84B613792779C91F005CFB4C /* UIColorExtension.swift in Sources */,
 				02DE45D829BB2645007109E5 /* RotateAnimation.swift in Sources */,
 				02DE45D229BB1D1C007109E5 /* DXBufferStorage.m in Sources */,
 				84B6135B2779C284005CFB4C /* AppDelegate.swift in Sources */,
-				84B613752779C63F005CFB4C /* UIImage+Extension.swift in Sources */,
+				84B613752779C63F005CFB4C /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +446,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,8 +479,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

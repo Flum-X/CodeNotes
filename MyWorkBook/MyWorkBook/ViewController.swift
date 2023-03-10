@@ -21,14 +21,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         
-        customSliderTest()
+//        customSliderTest()
+//
+//        bufferTest()
         
-        bufferTest()
+        popupTest()
     }
 
     private func customSliderTest() {
-        view.backgroundColor = .white
         
         let slider = CustomSlider()
         slider.height = 12
@@ -63,6 +65,18 @@ class ViewController: UIViewController {
             model.content = index.description
             objBuffer?.receive(model)
         }
+    }
+    
+    private func popupTest() {
+        
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        view.addGestureRecognizer(tapGes)
+    }
+    
+    @objc func tapAction() {
+        
+        let popup = BasePopupView(contentHeight: 380)
+        popup.showInView(view: view, topCorner: 25)
     }
     
 }
