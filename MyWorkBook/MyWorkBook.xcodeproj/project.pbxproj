@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02DE45D229BB1D1C007109E5 /* DXBufferStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D129BB1D1C007109E5 /* DXBufferStorage.m */; };
+		02DE45D529BB1DE1007109E5 /* DXBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D429BB1DE1007109E5 /* DXBuffer.m */; };
 		091EC3E5D0E0D429DDD6B371 /* Pods_MyWorkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F881A5BF06E31F84B7EB765 /* Pods_MyWorkBook.framework */; };
 		84B6135B2779C284005CFB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6135A2779C284005CFB4C /* AppDelegate.swift */; };
 		84B6135F2779C284005CFB4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6135E2779C284005CFB4C /* ViewController.swift */; };
@@ -20,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02DE45CE29BB1C9E007109E5 /* IDXBufferStorge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDXBufferStorge.h; sourceTree = "<group>"; };
+		02DE45CF29BB1D1C007109E5 /* MyWorkBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyWorkBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		02DE45D029BB1D1C007109E5 /* DXBufferStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXBufferStorage.h; sourceTree = "<group>"; };
+		02DE45D129BB1D1C007109E5 /* DXBufferStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXBufferStorage.m; sourceTree = "<group>"; };
+		02DE45D329BB1DE1007109E5 /* DXBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXBuffer.h; sourceTree = "<group>"; };
+		02DE45D429BB1DE1007109E5 /* DXBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXBuffer.m; sourceTree = "<group>"; };
 		0F881A5BF06E31F84B7EB765 /* Pods_MyWorkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWorkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA873F226A4807FECD7D588 /* Pods-MyWorkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWorkBook.debug.xcconfig"; path = "Target Support Files/Pods-MyWorkBook/Pods-MyWorkBook.debug.xcconfig"; sourceTree = "<group>"; };
 		84B613572779C284005CFB4C /* MyWorkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02DE45CD29BB1C57007109E5 /* DXBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				02DE45CE29BB1C9E007109E5 /* IDXBufferStorge.h */,
+				02DE45D029BB1D1C007109E5 /* DXBufferStorage.h */,
+				02DE45D129BB1D1C007109E5 /* DXBufferStorage.m */,
+				02DE45D329BB1DE1007109E5 /* DXBuffer.h */,
+				02DE45D429BB1DE1007109E5 /* DXBuffer.m */,
+			);
+			path = DXBuffer;
+			sourceTree = "<group>";
+		};
 		0A40638E0EBAA73A93AAD0BB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +108,7 @@
 			children = (
 				84B6135A2779C284005CFB4C /* AppDelegate.swift */,
 				84B6135E2779C284005CFB4C /* ViewController.swift */,
+				02DE45CD29BB1C57007109E5 /* DXBuffer */,
 				84B613702779C521005CFB4C /* CustomSlider */,
 				84B613732779C5EB005CFB4C /* Extensions */,
 				84B6136F2779C3BB005CFB4C /* Supporting */,
@@ -99,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				84B613762779C6E3005CFB4C /* Constant.swift */,
+				02DE45CF29BB1D1C007109E5 /* MyWorkBook-Bridging-Header.h */,
 				84B613602779C284005CFB4C /* Main.storyboard */,
 				84B613632779C285005CFB4C /* Assets.xcassets */,
 				84B613652779C285005CFB4C /* LaunchScreen.storyboard */,
@@ -158,6 +180,7 @@
 				TargetAttributes = {
 					84B613562779C284005CFB4C = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -242,7 +265,9 @@
 				84B6135F2779C284005CFB4C /* ViewController.swift in Sources */,
 				84B613722779C57A005CFB4C /* CustomSlider.swift in Sources */,
 				84B613772779C6E3005CFB4C /* Constant.swift in Sources */,
+				02DE45D529BB1DE1007109E5 /* DXBuffer.m in Sources */,
 				84B613792779C91F005CFB4C /* UIColor+Extension.swift in Sources */,
+				02DE45D229BB1D1C007109E5 /* DXBufferStorage.m in Sources */,
 				84B6135B2779C284005CFB4C /* AppDelegate.swift in Sources */,
 				84B613752779C63F005CFB4C /* UIImage+Extension.swift in Sources */,
 			);
@@ -392,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = USBF96D75N;
@@ -411,6 +437,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.favorite.MyWorkBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyWorkBook/Supporting/MyWorkBook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -422,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = USBF96D75N;
@@ -441,6 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.favorite.MyWorkBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyWorkBook/Supporting/MyWorkBook-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

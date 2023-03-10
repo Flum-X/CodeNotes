@@ -7,15 +7,27 @@
 
 import UIKit
 
+class BufferTestModel: NSObject {
+    var content = ""
+}
+
 class ViewController: UIViewController {
 
+    private var objBuffer: DXBuffer<BufferTestModel>?
+    
+    deinit {
+        objBuffer?.stop()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initUI()
+        customSliderTest()
+        
+        bufferTest()
     }
 
-    private func initUI() {
+    private func customSliderTest() {
         view.backgroundColor = .white
         
         let slider = CustomSlider()
@@ -32,5 +44,26 @@ class ViewController: UIViewController {
         }
     }
 
+    private func bufferTest() {
+        
+        let config = DXBufferConfig()
+        // 接收频率 5个/s
+        config.t = 1 / 5.0
+        // 阈值 10
+        config.bufferSize = 10
+        objBuffer = DXBuffer(storage: DXQueueStorage(), config: config)
+        objBuffer?.completion = { buffer in
+            //处理buffer数据
+            print(buffer.content)
+        }
+        objBuffer?.start()
+        
+        for index in 0 ..< 10 {
+            let model = BufferTestModel()
+            model.content = index.description
+            objBuffer?.receive(model)
+        }
+    }
+    
 }
 
