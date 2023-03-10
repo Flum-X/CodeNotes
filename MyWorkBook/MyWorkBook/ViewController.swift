@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class BufferTestModel: NSObject {
     var content = ""
@@ -14,6 +15,8 @@ class BufferTestModel: NSObject {
 class ViewController: UIViewController {
 
     private var objBuffer: DXBuffer<BufferTestModel>?
+    
+    @ToObservable private(set) var buffer: BufferTestModel?
     
     deinit {
         objBuffer?.stop()
@@ -27,7 +30,9 @@ class ViewController: UIViewController {
 //
 //        bufferTest()
         
-        popupTest()
+//        popupTest()
+        
+        toObservableTest()
     }
 
     private func customSliderTest() {
@@ -77,6 +82,17 @@ class ViewController: UIViewController {
         
         let popup = BasePopupView(contentHeight: 380)
         popup.showInView(view: view, topCorner: 25)
+    }
+    
+    private func toObservableTest() {
+        
+        buffer = BufferTestModel()
+        buffer?.content = "Hello World!"
+        
+        $buffer.subscribe(onNext: { model in
+            print(model?.content ?? "")
+        }).disposed(by: DisposeBag())
+        
     }
     
 }
