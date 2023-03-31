@@ -31,4 +31,34 @@ func DLog<T> (_ message: T, _ fileName: String = #file, _ funcName: String = #fu
 
 struct Constant {
     
+    /// 屏幕适配
+    public static func iPhoneXSafeBottomMargin() -> CGFloat {
+        UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0.0
+    }
+
+    public static func statusGap() -> CGFloat {
+        // 小屏兼容
+        let r = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        return r > 0 ? r : 20
+    }
+
+    public static func statusBarHeight() -> CGFloat {
+        var statusBarHeight: CGFloat = 0.0
+        
+        if #available(iOS 13.0, *) {
+            let statusBarMangager = UIApplication.shared.windows.first?.windowScene?.statusBarManager
+            statusBarHeight = (statusBarMangager?.statusBarFrame.size.height)!
+        } else {
+            statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+        }
+        
+        return statusBarHeight
+    }
+
+    public static let navigationBarContentHeight: CGFloat = 44
+
+    public static func navigationBarHeight() -> CGFloat {
+        statusGap() + navigationBarContentHeight
+    }
+    
 }

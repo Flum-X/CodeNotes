@@ -10,7 +10,7 @@ import RxSwift
 
 //让存储的属性可以变成一个可观测序列的属性包装器
 @propertyWrapper struct ToObservable<T> {
-    let observable: BehaviorSubject<T>
+    private let observable: BehaviorSubject<T>
     var wrappedValue: T {
         didSet {
             self.observable.onNext(wrappedValue)

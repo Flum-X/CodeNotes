@@ -6,93 +6,76 @@
 //
 
 import UIKit
-import RxSwift
-
-class BufferTestModel: NSObject {
-    var content = ""
-}
 
 class ViewController: UIViewController {
-
-    private var objBuffer: DXBuffer<BufferTestModel>?
     
-    @ToObservable private(set) var buffer: BufferTestModel?
+    private var tableView: UITableView!
     
-    deinit {
-        objBuffer?.stop()
-    }
+    private var titles = ["BufferTest", "CustomTransitions"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-//        customSliderTest()
-//
-//        bufferTest()
-        
-//        popupTest()
-        
-        toObservableTest()
+        initUI()
     }
 
-    private func customSliderTest() {
+    private func initUI() {
         
-        let slider = CustomSlider()
-        slider.height = 12
-        slider.maximumTrackTintColor = .black.withAlphaComponent(0.1)
-        let gradientImg = UIImage.gradient([UIColor.rgb(from: 0x47daff), UIColor.rgb(from: 0x6affd0)], size: CGSize(width: 300, height: 12), radius: 6, locations: [0, 1], direction: .horizontal)
-        slider.setMinimumTrackImage(gradientImg, for: .normal)
-        view.addSubview(slider)
+        tableView = UITableView()
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = true
+        }
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
+        tableView.showsVerticalScrollIndicator = false
+//        tableView.separatorStyle = .none
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 0
+        tableView.estimatedSectionFooterHeight = 0
+        tableView.estimatedSectionHeaderHeight = 0
+        view.addSubview(tableView)
         
-        slider.snp.makeConstraints { make in
-            make.left.equalTo(20)
-            make.right.equalTo(-20)
-            make.center.equalToSuperview()
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(Constant.navigationBarHeight())
+            make.left.right.bottom.equalToSuperview()
         }
     }
+}
 
-    private func bufferTest() {
-        
-        let config = DXBufferConfig()
-        // 接收频率 5个/s
-        config.t = 1 / 5.0
-        // 阈值 10
-        config.bufferSize = 10
-        objBuffer = DXBuffer(storage: DXQueueStorage(), config: config)
-        objBuffer?.completion = { buffer in
-            //处理buffer数据
-            print(buffer.content)
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+    -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cellId")
+        cell.textLabel?.text = titles[indexPath.row]
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let vc = BufferTestVC()
+            vc.title = titles[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        case 1:
+            let vc = CutsomTransitionVC()
+            vc.title = titles[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        default:
+            break
         }
-        objBuffer?.start()
-        
-        for index in 0 ..< 10 {
-            let model = BufferTestModel()
-            model.content = index.description
-            objBuffer?.receive(model)
-        }
-    }
-    
-    private func popupTest() {
-        
-        let tapGes = UITapGestureRecognizer(target: self, action: #selector(tapAction))
-        view.addGestureRecognizer(tapGes)
-    }
-    
-    @objc func tapAction() {
-        
-        let popup = BasePopupView(contentHeight: 380)
-        popup.showInView(view: view, topCorner: 25)
-    }
-    
-    private func toObservableTest() {
-        
-        buffer = BufferTestModel()
-        buffer?.content = "Hello World!"
-        
-        $buffer.subscribe(onNext: { model in
-            print(model?.content ?? "")
-        }).disposed(by: DisposeBag())
-        
     }
     
 }

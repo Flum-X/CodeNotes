@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0263F57929D695E40046677A /* BufferTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263F57829D695E40046677A /* BufferTestVC.swift */; };
+		0263F57B29D69CFC0046677A /* CutsomTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263F57A29D69CFC0046677A /* CutsomTransitionVC.swift */; };
+		0263F57D29D69ECD0046677A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263F57C29D69ECD0046677A /* BaseVC.swift */; };
 		02DE45D229BB1D1C007109E5 /* DXBufferStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D129BB1D1C007109E5 /* DXBufferStorage.m */; };
 		02DE45D529BB1DE1007109E5 /* DXBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D429BB1DE1007109E5 /* DXBuffer.m */; };
 		02DE45D829BB2645007109E5 /* RotateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D729BB2645007109E5 /* RotateAnimation.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0263F57829D695E40046677A /* BufferTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferTestVC.swift; sourceTree = "<group>"; };
+		0263F57A29D69CFC0046677A /* CutsomTransitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutsomTransitionVC.swift; sourceTree = "<group>"; };
+		0263F57C29D69ECD0046677A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		02DE45CE29BB1C9E007109E5 /* IDXBufferStorge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDXBufferStorge.h; sourceTree = "<group>"; };
 		02DE45CF29BB1D1C007109E5 /* MyWorkBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyWorkBook-Bridging-Header.h"; sourceTree = "<group>"; };
 		02DE45D029BB1D1C007109E5 /* DXBufferStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXBufferStorage.h; sourceTree = "<group>"; };
@@ -64,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0263F57729D694990046677A /* UIModules */ = {
+			isa = PBXGroup;
+			children = (
+				0263F57A29D69CFC0046677A /* CutsomTransitionVC.swift */,
+			);
+			path = UIModules;
+			sourceTree = "<group>";
+		};
 		02DE45CD29BB1C57007109E5 /* DXBuffer */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +140,9 @@
 			children = (
 				84B6135A2779C284005CFB4C /* AppDelegate.swift */,
 				84B6135E2779C284005CFB4C /* ViewController.swift */,
+				0263F57C29D69ECD0046677A /* BaseVC.swift */,
+				0263F57829D695E40046677A /* BufferTestVC.swift */,
+				0263F57729D694990046677A /* UIModules */,
 				02DE45D629BB2619007109E5 /* UniversalModules */,
 				02DE45CD29BB1C57007109E5 /* DXBuffer */,
 				84B613702779C521005CFB4C /* CustomSlider */,
@@ -282,9 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0263F57B29D69CFC0046677A /* CutsomTransitionVC.swift in Sources */,
 				84B6135F2779C284005CFB4C /* ViewController.swift in Sources */,
 				84B613722779C57A005CFB4C /* CustomSlider.swift in Sources */,
 				02DE45DC29BB2AF0007109E5 /* UIViewExtension.swift in Sources */,
+				0263F57D29D69ECD0046677A /* BaseVC.swift in Sources */,
+				0263F57929D695E40046677A /* BufferTestVC.swift in Sources */,
 				02DE45DA29BB29E4007109E5 /* BasePopupView.swift in Sources */,
 				84B613772779C6E3005CFB4C /* Constant.swift in Sources */,
 				02DE45D529BB1DE1007109E5 /* DXBuffer.m in Sources */,
