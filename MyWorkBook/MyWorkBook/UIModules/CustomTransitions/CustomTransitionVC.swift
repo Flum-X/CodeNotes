@@ -7,17 +7,20 @@
 
 import UIKit
 
-class CutsomTransitionVC: BaseVC {
+class CustomTransitionVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            self.customPush()
+//            self.customPush1()
+            self.customPush2()
         }
+        
     }
-
-    private func customPush() {
+    
+    /// 使用CATransition实现自定义转场动画效果
+    private func customPush1() {
         
         let vc = BaseVC()
         vc.title = "Test"
@@ -25,6 +28,14 @@ class CutsomTransitionVC: BaseVC {
         transition.type = .push
         transition.subtype = .fromLeft
         navigationController?.view.layer.add(transition, forKey: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    /// UIViewControllerAnimatedTransitioning & UINavigationControllerDelegate
+    private func customPush2() {
+        
+        let vc = BaseVC()
+        vc.title = "customPush2"
         navigationController?.pushViewController(vc, animated: true)
     }
     

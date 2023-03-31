@@ -69,7 +69,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(vc, animated: true)
             break
         case 1:
-            let vc = CutsomTransitionVC()
+            let vc = CustomTransitionVC()
             vc.title = titles[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
             break
