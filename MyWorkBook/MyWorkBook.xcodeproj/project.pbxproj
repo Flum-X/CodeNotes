@@ -12,6 +12,7 @@
 		0263F57D29D69ECD0046677A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263F57C29D69ECD0046677A /* BaseVC.swift */; };
 		0263F58029D6CF630046677A /* FadePushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263F57F29D6CF630046677A /* FadePushAnimator.swift */; };
 		0263F58229D6CF7B0046677A /* FadePopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263F58129D6CF7B0046677A /* FadePopAnimator.swift */; };
+		02A2C6042BA4094100EF20FC /* DemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2C6032BA4094000EF20FC /* DemoTest.swift */; };
 		02DE45D229BB1D1C007109E5 /* DXBufferStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D129BB1D1C007109E5 /* DXBufferStorage.m */; };
 		02DE45D529BB1DE1007109E5 /* DXBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D429BB1DE1007109E5 /* DXBuffer.m */; };
 		02DE45D829BB2645007109E5 /* RotateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE45D729BB2645007109E5 /* RotateAnimation.swift */; };
@@ -36,6 +37,7 @@
 		0263F57C29D69ECD0046677A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0263F57F29D6CF630046677A /* FadePushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadePushAnimator.swift; sourceTree = "<group>"; };
 		0263F58129D6CF7B0046677A /* FadePopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadePopAnimator.swift; sourceTree = "<group>"; };
+		02A2C6032BA4094000EF20FC /* DemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTest.swift; sourceTree = "<group>"; };
 		02DE45CE29BB1C9E007109E5 /* IDXBufferStorge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDXBufferStorge.h; sourceTree = "<group>"; };
 		02DE45CF29BB1D1C007109E5 /* MyWorkBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyWorkBook-Bridging-Header.h"; sourceTree = "<group>"; };
 		02DE45D029BB1D1C007109E5 /* DXBufferStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXBufferStorage.h; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				84B6135E2779C284005CFB4C /* ViewController.swift */,
 				0263F57C29D69ECD0046677A /* BaseVC.swift */,
 				0263F57829D695E40046677A /* BufferTestVC.swift */,
+				02A2C6032BA4094000EF20FC /* DemoTest.swift */,
 				0263F57729D694990046677A /* UIModules */,
 				02DE45D629BB2619007109E5 /* UniversalModules */,
 				02DE45CD29BB1C57007109E5 /* DXBuffer */,
@@ -317,6 +320,7 @@
 				84B6135F2779C284005CFB4C /* ViewController.swift in Sources */,
 				84B613722779C57A005CFB4C /* CustomSlider.swift in Sources */,
 				02DE45DC29BB2AF0007109E5 /* UIViewExtension.swift in Sources */,
+				02A2C6042BA4094100EF20FC /* DemoTest.swift in Sources */,
 				0263F57D29D69ECD0046677A /* BaseVC.swift in Sources */,
 				0263F57929D695E40046677A /* BufferTestVC.swift in Sources */,
 				02DE45DA29BB29E4007109E5 /* BasePopupView.swift in Sources */,
@@ -488,7 +492,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +525,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

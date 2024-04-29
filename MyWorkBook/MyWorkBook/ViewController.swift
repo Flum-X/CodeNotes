@@ -45,6 +45,15 @@ class ViewController: UIViewController {
             make.left.right.bottom.equalToSuperview()
         }
     }
+    
+    private func errorTest() {
+        // TODO: 这里临时写死，需求待确认
+        #if DEBUG
+                
+        #else
+        #error("函数尚未实现，需要及时处理！！！")
+        #endif
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

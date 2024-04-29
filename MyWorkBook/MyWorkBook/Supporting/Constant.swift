@@ -33,12 +33,12 @@ struct Constant {
     
     /// 屏幕适配
     public static func iPhoneXSafeBottomMargin() -> CGFloat {
-        UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0.0
+        keyWindow?.safeAreaInsets.bottom ?? 0.0
     }
 
     public static func statusGap() -> CGFloat {
         // 小屏兼容
-        let r = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        let r = keyWindow?.safeAreaInsets.top ?? 0
         return r > 0 ? r : 20
     }
 
@@ -59,6 +59,10 @@ struct Constant {
 
     public static func navigationBarHeight() -> CGFloat {
         statusGap() + navigationBarContentHeight
+    }
+    
+    public static var keyWindow: UIWindow? {
+        return UIApplication.shared.windows.filter({$0.isKeyWindow == true}).first
     }
     
 }
